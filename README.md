@@ -23,4 +23,4 @@ Creation bytes can be passed to `qort-tx` script as part of a `DEPLOY-AT` transa
 So using example above, sending 1.0 QORT to cover AT fees:\
     `description="qrowdfund test 60min, 10.4 QORT to null account awardee"`\
     `creation_bytes=$(java -cp 'target/qrowdfund-1.0.0.jar:target/dependency/*' org.qortal.at.qrowdfund.Qrowdfund 60 10.4 QdSnUy6sUiEnaN87dWmE92g1uQjrvPgrWG | tail +2)`\
-    `qort-tx DEPLOY_AT private-key-in-base58 'qrowdfund-test' "$description" 'qrowdfund' 'qrowdfund' $creation_bytes 1.0`
+    `qort-tx -s -p DEPLOY_AT private-key-in-base58 'qrowdfund-test' "$description" 'qrowdfund' 'qrowdfund' $creation_bytes 1.0`
